@@ -1,0 +1,181 @@
+body,
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+
+    z-index: 1000;
+}
+
+
+nav {
+    display: flex;
+    justify-content: right;
+    background-color: black;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.5s ease;
+}
+
+
+nav a:active::after {
+    width: 100%;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+nav a.active {
+    border-bottom: 2px solid white;
+}
+
+img {
+    width: 200px;
+    height: 80px;
+    z-index: 1001;
+}
+
+.image-container {
+    position: relative;
+    margin-top: 90px;
+    width: 100%;
+    height: 450px;
+    background-image: url('healthy.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-text {
+    font-size: 100px;
+    font-family: 'Calibri', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+
+#sitemap-container {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    background-color: #FFE8B0;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+svg {
+    width: 100%;
+    height: auto;
+
+
+
+}
+
+.node {
+    fill: #FF8200;
+    transition: fill 0.3s ease;
+}
+
+.node:hover {
+    fill: #2197F4;
+}
+
+line {
+    stroke-width: 0.5;
+}
+
+.node-text {
+    font-family: Arial, sans-serif;
+    font-size: 3px;
+    fill: white;
+    font-weight: bold;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 100px;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    border-top: 2px solid #666;
+    box-sizing: border-box;
+}
+
+.footer-logo {
+    flex: 1 0 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-logo img {
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.footer-topic {
+    flex: 1 0 25%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer-subtopic {
+    flex: 1 0 25%;
+    font-weight: normal;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.footer-copyright {
+    flex: 1 0 100%;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #999;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Page</title>
+    <link rel="stylesheet" href="content.css">
+</head>
+
+<body class="background">
+    <header>
+        <img src="logo.png" alt="logo" class="img">
+
+        <nav>
+
+            <a href="home.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="Shop.html">Shop</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="team.html">Team</a>
+            <a href="profile.html">Profile</a>
+        </nav>
+    </header>
+    <h1 class="Top-text">Environmental Health</h1>
+    <div class="extended-view" id="extendedView">
+        <div class="content-container">
+            <div class="image-container">
+                <img src="photo.jpg" alt="Image" id="extendedImage">
+            </div>
+            <div class="description-container">
+                <p class="imageDescription"><b>Air Quality and Pollution Control</b></p>
+                <p class="imageDescription">This subtopic addresses the sources, impacts, and mitigation strategies
+                    related to air pollution, focusing on reducing emissions from industrial, vehicular, and domestic
+                    activities to protect public health and reduce the risk of respiratory and cardiovascular diseases.
+                </p>
+
+                <p class="imageDescription"><b>Water Quality and Access</b></p>
+                <p class="imageDescription">This area explores the importance of clean water for drinking, sanitation,
+                    and hygiene, discussing
+                    challenges such as contamination, waterborne diseases, and the strategies for ensuring safe water
+                    access and sustainable water resources management.</p>
+
+                <p class="imageDescription"><b>Waste Management and Recycling</b></p>
+                <p class="imageDescription">Focusing on the reduction, proper disposal, and recycling of solid and
+                    hazardous wastes, this
+                    subtopic emphasizes sustainable practices to minimize environmental impact, prevent pollution, and
+                    promote public health through effective waste management systems.</p>
+
+                <p class="imageDescription"><b>Climate Change and Health Impacts</b></p>
+                <p class="imageDescription">This subtopic examines how climate change affects environmental determinants
+                    of health, such as
+                    clean air, safe drinking water, sufficient food, and secure shelter, and discusses adaptation and
+                    mitigation measures to protect communities from climate-related health risks.</p>
+                <p class="imageDescription">It also highlights the significance of addressing <a
+                        href="mental_health.html"><b>mental health</b></a> concerns that arise from environmental
+                    stressors, recognizing the profound impact that climate change and environmental
+                    degradation can have on psychological well-being.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-logo">
+            <img src="logo.png" alt="logo" class="img">
+            <p>Working with the aim to achieve universal health coverage.</p>
+        </div>
+
+        <div id="about-topic" class="footer-topic">About
+            <div class="footer-subtopic" id="portfolio">Portfolio</div>
+            <div class="footer-subtopic" id="sitemap">Sitemap</div>
+            <div class="footer-subtopic" id="team">Team</div>
+            <div class="footer-subtopic" id="editor">Editor</div>
+        </div>
+
+        <div class="footer-topic">Contact
+            <div class="footer-subtopic">Email: contact@healthcore.com</div>
+            <div class="footer-subtopic">Phone: +94766227677</div>
+            <div class="footer-subtopic">Address: 158/23 Main St, Battaramulla, Sri Lanka</div>
+        </div>
+
+        <div id="support-topic" class="footer-topic">Support
+            <div class="footer-subtopic" id="privacy-policy">Privacy & Policy</div>
+            <div class="footer-subtopic" id="terms-of-service">Terms of Service</div>
+            <div class="footer-subtopic" id="faq">FAQ</div>
+        </div>
+
+        <div class="footer-copyright">
+            &copy; 2024 HealthCore. All rights reserved.
+        </div>
+    </footer>
+    <script>
+        const currentPage = window.location.pathname.split('/').pop();
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            if (link.getAttribute('href').endsWith(currentPage)) {
+                link.classList.add('active');
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+
+
+            const portfolio = document.getElementById('portfolio');
+            const sitemap = document.getElementById('sitemap');
+            const team = document.getElementById('team');
+            const privacyPolicy = document.getElementById('privacy-policy');
+            const termsOfService = document.getElementById('terms-of-service');
+            const faq = document.getElementById('faq');
+            const editor = document.getElementById('editor');
+
+
+
+            portfolio.addEventListener('click', function () {
+                window.location.href = 'portfolio.html';
+            });
+
+            sitemap.addEventListener('click', function () {
+                window.location.href = 'sitemap.html';
+            });
+
+            team.addEventListener('click', function () {
+                window.location.href = 'team.html';
+            });
+
+            privacyPolicy.addEventListener('click', function () {
+                window.location.href = 'privacy_policy.html';
+            });
+
+            termsOfService.addEventListener('click', function () {
+                window.location.href = 'terms_of_service.html';
+            });
+
+            faq.addEventListener('click', function () {
+                window.location.href = 'faq.html';
+            });
+
+            editor.addEventListener('click', function () {
+                window.location.href = 'page_editor.html';
+            });
+
+        });
+    </script>
+</body>
+
+</html>
